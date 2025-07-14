@@ -1,6 +1,7 @@
 // script.js
 const API_BASE = 'http://api.jquiroz.net:8000';
 // Función para agregar un producto
+
 function agregarProducto() {
     const nombre = document.getElementById('nombre').value;
     const precio = document.getElementById('precio').value;
