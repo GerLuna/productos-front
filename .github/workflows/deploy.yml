@@ -1,0 +1,27 @@
+name: Deploy Frontend to jquiroz.net
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy front to Server
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH key
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_KEY }}
+    - name: Deploy to jquiroz.net
+      run: |
+        ssh -o StrictHostKeyChecking=no gerardo@jquiroz.net << 'EOF'
+          cd /home/gerardo/servicio-licenciatura/productos-front
+          git pull origin main
+          docker-compose down
+          docker-compose up -d --build
+        EOF
