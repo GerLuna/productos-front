@@ -1,5 +1,5 @@
 // script.js
-const API_BASE = 'http://api.jquiroz.net:8000';
+const API_BASE = 'http://api.jquiroz.net:3013';
 // Función para agregar un producto
 
 function agregarProducto() {
