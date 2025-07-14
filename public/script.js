@@ -13,7 +13,7 @@ function agregarProducto() {
         return;
     }
     console.log("Agregar el producto");
-    fetch(`${API_BASE}/productos`, {
+    fetch(`${API_BASE}/api/productos`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function agregarProducto() {
 
 // Función para cargar todos los productos
 function cargarProductos() {
-    fetch(`${API_BASE}/productos`)
+    fetch(`${API_BASE}/api/productos`)
         .then(response => response.json())
         .then(data => {
             const lista = document.getElementById('lista-productos');
@@ -55,7 +55,7 @@ function cargarProductos() {
 
 // Función para eliminar un producto
 function eliminarProducto(id) {
-    fetch(`${API_BASE}/productos/${id}`, {
+    fetch(`${API_BASE}/api/productos/${id}`, {
         method: 'DELETE',
     })
     .then(response => response.json())
