@@ -2,6 +2,7 @@
 //const API_BASE = 'http://api.jquiroz.net:3013';
 const API_BASE = 'http://jquiroz.net:3013';
 // Función para agregar un producto
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc1MjUwODYxNX0.YWpb2-Vk4LPvcF2bS4AV7E9xiMBMIZ2ERD0QIcdwRpY"
 
 function agregarProducto() {
     const nombre = document.getElementById('nombre').value;
