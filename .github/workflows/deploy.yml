@@ -20,7 +20,7 @@ jobs:
     - name: Deploy to jquiroz.net
       run: |
         ssh -o StrictHostKeyChecking=no gerardo@jquiroz.net << 'EOF'
-          cd /home/gerardo/servicio-licenciatura/productos-front
+          cd /home/gerardo/productos-front
           git pull origin main
           docker-compose down
           docker-compose up -d --build
