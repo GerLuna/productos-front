@@ -5,4 +5,4 @@ services:
       - "3021:3021"
     environment:
       - NODE_ENV=production
-
+      - VITE_API_URL=http://api.jquiroz.net:3013

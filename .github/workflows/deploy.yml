@@ -22,6 +22,6 @@ jobs:
         ssh -o StrictHostKeyChecking=no gerardo@jquiroz.net << 'EOF'
           cd /home/gerardo/productos-front
           git pull origin main
-          docker-compose down
+          docker-compose down --volumes
           docker-compose up -d --build
         EOF

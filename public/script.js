@@ -1,5 +1,5 @@
 // script.js
-const API_BASE = 'http://jquiroz.net:3013';
+const API_BASE = 'http://api.jquiroz.net:3013';
 // Función para agregar un producto
 
 function agregarProducto() {
@@ -54,7 +54,7 @@ function cargarProductos() {
 
 // Función para eliminar un producto
 function eliminarProducto(id) {
-    fetch(`${API_BASE}/productos`, {
+    fetch(`${API_BASE}/productos/${id}`, {
         method: 'DELETE',
     })
     .then(response => response.json())
